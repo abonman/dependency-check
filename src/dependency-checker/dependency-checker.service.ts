@@ -56,7 +56,7 @@ export class DependencyCheckerService {
     );
     /* find files end */
 
-    // this.sendEmail(userMails, packageList);
+    this.sendEmail(userMails, packageList);
     return packageList;
   }
 
