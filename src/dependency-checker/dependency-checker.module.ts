@@ -3,12 +3,12 @@ import { Module } from '@nestjs/common';
 import { DependencyCheckerController } from './dependency-checker.controller';
 import { DbModule } from '../database/db.module';
 import { HttpModule } from '@nestjs/axios';
-import { GitModule } from '../git/git.module';
+import { GitHubModule } from '../github/github.module';
 import { MailModule } from '../mail/mail.module';
 import { RepositoryModule } from '../repository/repository.module';
 
 @Module({
-  imports: [DbModule, HttpModule, GitModule, MailModule, RepositoryModule],
+  imports: [DbModule, HttpModule, GitHubModule, MailModule, RepositoryModule],
   controllers: [DependencyCheckerController],
   providers: [DependencyCheckerService],
 })

@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 
 import { DbService } from 'src/database/db.service';
-import { GitService } from '../git/git.service';
+import { GitHubService } from '../github/github.service';
 import { MailScheduleService } from '../mail/mail-schedule.service';
 
 import MailDto from '../mail/mail.dto';
@@ -12,7 +12,7 @@ import { DependencyCheckerDto } from './dependency-checker.dto';
 export class DependencyCheckerService {
   constructor(
     private readonly db: DbService,
-    private readonly gitService: GitService,
+    private readonly gitService: GitHubService,
     private readonly mailScheduleService: MailScheduleService,
     private readonly repositoryService: RepositoryService,
   ) {}

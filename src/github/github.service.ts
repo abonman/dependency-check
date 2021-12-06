@@ -4,7 +4,7 @@ import { HttpService } from '@nestjs/axios';
 import { RepositoryService } from '../repository/repository.service';
 
 @Injectable()
-export class GitService {
+export class GitHubService {
   constructor(
     private httpService: HttpService,
     private repoService: RepositoryService,
