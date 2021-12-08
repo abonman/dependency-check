@@ -118,11 +118,6 @@ export class DependencyCheckerService {
           throw JSON.stringify(err);
         default:
           throw err;
-        /*
-         console.log('**++**' + JSON.stringify(err));
-         throw new Error("Error" + err.message + "" + err.detail); 
-         throw new ConflictException();
-         */
       }
     });
   }

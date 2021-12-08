@@ -25,7 +25,7 @@ export class GitHubService {
   async readGitVersions(packageName: string, repo: string): Promise<any> {
     try {
       const url = `https://api.github.com/repos/${repo}/contents/${packageName}`;
-      console.log(url);
+
       const res = await (
         await firstValueFrom(
           this.httpService.get(url, {
